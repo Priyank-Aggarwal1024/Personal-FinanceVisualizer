@@ -31,8 +31,8 @@ function CommonLayout({ children }) {
           toggleMinimize={() => setMinimized(!minimized)}
         />
         {!isNotFoundPage ? (
-          <div className="h-full w-full  overflow-y-auto ">
-            <main className="flex-1 lg:p-6 md:p-4 px-3 py-6 h-fullrelative">
+          <div className="h-full w-full  overflow-y-auto  max-w-full">
+            <main className="flex-1 lg:p-6 md:p-4 px-3 max-w-full py-6 h-fullrelative">
               <div className="flex items-center justify-start mb-6">
                 {!open && (
                   <span

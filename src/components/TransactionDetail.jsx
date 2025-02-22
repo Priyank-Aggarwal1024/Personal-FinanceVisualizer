@@ -216,8 +216,8 @@ function TransactionDetail() {
         </TableBody>
         <TableFooter></TableFooter>
       </Table>
-      <div className="w-full flex flex-wrap items-center justify-between gap-4 lg:px-4 md:px-2 px-0 py-2">
-        <div className="flex-1 flex justify-start">
+      <div className="w-full flex flex-wrap items-center justify-between gap-4 max-w-full lg:px-4 md:px-2 px-0 py-2">
+        <div className="flex flex-wrap justify-start max-w-full">
           <Pagination
             pageSize={pageSize}
             totalTransaction={totalTransaction}
