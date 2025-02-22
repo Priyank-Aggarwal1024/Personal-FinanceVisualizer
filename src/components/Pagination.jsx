@@ -44,7 +44,7 @@ export default function Pagination({
   };
 
   return (
-    <div className="w-full py-4 flex items-center md:justify-center gap-2">
+    <div className="w-full py-4 flex items-center md:justify-center gap-2 flex-wrap">
       <Button
         className="md:w-24 w-18"
         variant="outline"
