@@ -171,11 +171,11 @@ function TransactionDetail() {
               key={tx._id}
               className="hover:bg-gray-50 bg-gray-100 cursor-pointer"
             >
-              <TableCell className="font-medium w-1/2">
-                <span className="relative aspect-square min-w-8 p-1 mr-4 inline-flex rounded-full bg-black text-white justify-center items-center">
+              <TableCell className="font-medium w-full flex items-center">
+                <div className="relative aspect-square min-w-8 p-1 mr-4 inline-flex rounded-full bg-black text-white justify-center items-center">
                   {(page - 1) * pageSize + idx + 1}
-                </span>{" "}
-                <span>{tx.description}</span>
+                </div>{" "}
+                <div className="w-full">{tx.description}</div>
               </TableCell>
               <TableCell className=" w-1/6">
                 {String(tx.type).toLocaleUpperCase()}

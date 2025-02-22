@@ -132,7 +132,7 @@ export default function Home() {
             <FaPlus className="mr-2" /> Add Transaction
           </Button>
         </div>
-        <Table className="overflow-hidden border relative mt-6 min-w-[800px]">
+        <Table className="overflow-hidden border relative mt-6 min-w-[750px]">
           <TableHeader>
             <TableRow className="w-full">
               <TableHead className="w-1/2">Description</TableHead>
@@ -148,11 +148,11 @@ export default function Home() {
                 key={tx._id}
                 className="hover:bg-gray-50 bg-gray-100 cursor-pointer"
               >
-                <TableCell className="font-medium w-1/2">
-                  <span className="relative aspect-square min-w-8 p-1 inline-flex rounded-full bg-black text-white justify-center items-center">
+                <TableCell className="font-medium w-full flex items-center">
+                  <div className="relative aspect-square min-w-8 p-1 mr-4 inline-flex rounded-full bg-black text-white justify-center items-center">
                     {idx + 1}
-                  </span>{" "}
-                  <span>{tx.description}</span>
+                  </div>{" "}
+                  <div className="w-full">{tx.description}</div>
                 </TableCell>
                 <TableCell className=" w-1/6">
                   {String(tx.type).toLocaleUpperCase()}
