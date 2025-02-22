@@ -121,7 +121,7 @@ export default function BudgetComp() {
                   >
                     <TableCell className="font-medium w-full flex items-center">
                       <div className="relative aspect-square min-w-8 p-1 mr-4 inline-flex rounded-full bg-black text-white justify-center items-center">
-                        {idx + 1}
+                        {(page - 1) * pageSize + idx + 1}
                       </div>
                       <div className="w-full">
                         {String(category.name).toLocaleUpperCase()}

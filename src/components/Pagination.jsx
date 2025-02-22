@@ -100,7 +100,10 @@ export default function Pagination({
         </span>
         <Select
           value={String(pageSize)}
-          onValueChange={(value) => setPageSize(parseInt(value))}
+          onValueChange={(value) => {
+            setPageSize(parseInt(value));
+            handlePageChange(1);
+          }}
         >
           <SelectTrigger
             className="w-24 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 

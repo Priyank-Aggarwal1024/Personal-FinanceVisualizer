@@ -33,7 +33,10 @@ export default function BudgetVsActualChart({ transactions, categories }) {
           <YAxis tick={{ fill: "#555" }} />
           <Tooltip
             contentStyle={{ backgroundColor: "#fff", borderRadius: "8px" }}
-            formatter={(value, props) => [`₹${Number(value.toFixed(2))}`]}
+            formatter={(value, name) => [
+              `₹${Number(value.toFixed(2))}`,
+              name === "budget" ? "Budget" : "Actual",
+            ]}
           />
           <Area
             type="monotone"
@@ -51,6 +54,22 @@ export default function BudgetVsActualChart({ transactions, categories }) {
           />
         </AreaChart>
       </ResponsiveContainer>
+      <div className="w-full pt-4 flex justify-center gap-6 flex-wrap">
+        <div className="flex items-center gap-3">
+          <span
+            className={`w-5 h-5 block`}
+            style={{ backgroundColor: "#8884d8" }}
+          ></span>
+          <span className="">Budget</span>
+        </div>
+        <div className="flex items-center gap-3">
+          <span
+            className={`w-5 h-5 block`}
+            style={{ backgroundColor: "#82ca9d" }}
+          ></span>
+          <span className="">Actual</span>
+        </div>
+      </div>
     </div>
   );
 }

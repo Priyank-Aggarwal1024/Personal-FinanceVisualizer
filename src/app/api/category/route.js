@@ -67,7 +67,7 @@ export async function PUT(req) {
       name: { $regex: new RegExp(`^${name}$`, "i") },
     });
 
-    if (existingCategory) {
+    if (existingCategory && existingCategory._id != id) {
       return NextResponse.json(
         { message: "Category already exists" },
         { status: 400 }
