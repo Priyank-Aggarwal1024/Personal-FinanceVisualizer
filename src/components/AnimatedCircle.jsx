@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const AnimatedCircle = () => {
+const AnimatedCircle = ({ children }) => {
   return (
     <motion.div
       className="absolute w-60 h-60 bg-blue-700/50 rounded-full blur-3xl"
@@ -15,7 +15,9 @@ const AnimatedCircle = () => {
         repeat: Infinity,
         ease: "easeInOut",
       }}
-    />
+    >
+      {children}
+    </motion.div>
   );
 };
 
