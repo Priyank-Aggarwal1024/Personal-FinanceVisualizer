@@ -69,17 +69,23 @@ $ npm start
 
 ```
 .
-├── app
-│   ├── api
-│   │   ├── savedata
-│   │   │   └── route.js
-│   │   └── transactions
-│   │       └── route.js
+├── src
+│   ├── app
+│   │   ├── api
+│   │   │   ├── savedata
+│   │   │   │   └── route.js
+│   │   │   └── transactions
+│   │   │       └── route.js
+│   │   ├── pages
+│   │   │   └── transactions.js
+│   │   ├── layout.js
+│   │   ├── not-found.js
+│   │   ├── page.js
+│   │   └── styles
 │   ├── components
-│   ├── pages
-│   │   ├── index.js
-│   │   └── transactions.js
-│   └── styles
+│   ├── lib
+│   ├── models
+│   ├── utils
 ├── .env.local
 ├── next.config.js
 ├── package.json
