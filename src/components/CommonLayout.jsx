@@ -27,7 +27,7 @@ function CommonLayout({ children }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 3000);
+    }, 30000);
 
     return () => clearTimeout(timer);
   }, []);

@@ -76,7 +76,7 @@ const IncomeExpenseChart = ({ transactions }) => {
           <div className="flex items-center gap-1.5">
             <div className={`w-[2px] h-6 ${color}`}></div>
             <div className="text-sm">
-              {`${percentageChange}% ${
+              {`${isNaN(percentageChange) ? 0 : percentageChange}% ${
                 Number(percentageChange) < 0 ? "Decrease" : "Increase"
               }`}
             </div>
@@ -130,7 +130,7 @@ const IncomeExpenseChart = ({ transactions }) => {
                   <Cell fill={data[1].color} />
                 </Pie>
                 <Tooltip
-                  formatter={(value, name, props) => [
+                  formatter={(value, props) => [
                     `₹${Number(value.toFixed(2))}`,
                     props.payload.monthYear,
                   ]}

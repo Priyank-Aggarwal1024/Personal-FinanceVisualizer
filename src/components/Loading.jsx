@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Wallet } from "lucide-react";
+import AnimatedCircle from "./AnimatedCircle";
 
 export default function LoadingScreen() {
   return (
@@ -10,6 +11,19 @@ export default function LoadingScreen() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
+      <div className="fixed top-0 left-0 hidden md:block">
+        <AnimatedCircle />
+      </div>
+      <div className="fixed top-0 right-0 hidden md:block">
+        <AnimatedCircle />
+      </div>
+      <div className="fixed bottom-0 left-0 hidden md:block">
+        <AnimatedCircle />
+      </div>
+      <div className="fixed bottom-[10%] right-[10%] hidden md:block">
+        <AnimatedCircle />
+      </div>
+      <AnimatedCircle />
       <motion.div
         className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4"
         initial={{ opacity: 0, y: -20 }}
