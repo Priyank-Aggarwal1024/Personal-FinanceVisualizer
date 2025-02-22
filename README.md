@@ -117,5 +117,5 @@ Route (app)                              Size     First Load JS
 
 ---
 
-💻 Built with ❤️ by [PriyankAggarwal]
+💻 Built with ❤️ by [@PriyankAggarwal]
 
