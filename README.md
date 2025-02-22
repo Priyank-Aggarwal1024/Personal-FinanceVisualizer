@@ -48,7 +48,6 @@ Create a `.env.local` file and add the following:
 
 ```env
 MONGO_URI=mongodb+srv://your_mongodb_uri
-API_URL=http://localhost:3000/api/transactions
 ```
 
 4. **Run the development server:**
