@@ -14,10 +14,14 @@ function CommonLayout({ children }) {
   const [isVisible, setIsVisible] = useState(true);
 
   const isNotFoundPage = !(
-    pathname.includes("/transactions") || pathname == "/"
+    pathname.includes("/transactions") ||
+    pathname.includes("/category") ||
+    pathname == "/"
   );
   const title = pathname.includes("transactions")
     ? "Transactions"
+    : pathname.includes("category")
+    ? "Category "
     : "Dashboard";
 
   const toggleOpen = () => {

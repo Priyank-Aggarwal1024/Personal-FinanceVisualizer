@@ -29,6 +29,9 @@ const CategoryWisePieChart = ({ transactions }) => {
     "#A28FF2",
     "#F28FA2",
   ];
+  if (!transactions || transactions.length === 0) {
+    return <p>No data available.</p>;
+  }
 
   return (
     <ResponsiveContainer width="100%" height={400}>

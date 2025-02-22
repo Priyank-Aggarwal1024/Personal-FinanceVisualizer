@@ -130,10 +130,7 @@ const IncomeExpenseChart = ({ transactions }) => {
                   <Cell fill={data[1].color} />
                 </Pie>
                 <Tooltip
-                  formatter={(value, props) => [
-                    `₹${Number(value.toFixed(2))}`,
-                    props.payload.monthYear,
-                  ]}
+                  formatter={(value, props) => [`₹${Number(value.toFixed(2))}`]}
                 />
               </PieChart>
             </ResponsiveContainer>
@@ -142,6 +139,9 @@ const IncomeExpenseChart = ({ transactions }) => {
       </Card>
     );
   };
+  if (!transactions || transactions.length === 0) {
+    return <p>No data available.</p>;
+  }
 
   return (
     <div className="grid md:grid-cols-2 gap-4 mb-6">

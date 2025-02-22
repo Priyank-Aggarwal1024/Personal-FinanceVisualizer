@@ -39,6 +39,9 @@ const MonthlyCategoryChart = ({ transactions }) => {
     "#FF9800",
     "#9C27B0",
   ];
+  if (!transactions || transactions.length === 0) {
+    return <p>No data available.</p>;
+  }
 
   return (
     <ResponsiveContainer width="100%" className="" height={400}>

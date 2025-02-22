@@ -22,13 +22,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Pagination from "./Pagination";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./ui/select";
 import { initialState, validateTransaction } from "@/utils/constants";
 import TransactionForm from "./TransactionForm";
 import CustomDialog from "./CustomDialog";
@@ -216,39 +209,13 @@ function TransactionDetail() {
         </TableBody>
         <TableFooter></TableFooter>
       </Table>
-      <div className="w-full flex flex-wrap items-center justify-between gap-4 max-w-full lg:px-4 md:px-2 px-0 py-2">
-        <div className="flex flex-wrap justify-start max-w-full">
-          <Pagination
-            pageSize={pageSize}
-            totalTransaction={totalTransaction}
-            onPageChange={setPage}
-          />
-        </div>
 
-        <div className="flex items-center gap-2 ml-auto">
-          <span className="text-sm text-gray-700 dark:text-gray-300">
-            Page Size:
-          </span>
-          <Select
-            value={String(pageSize)}
-            onValueChange={(value) => setPageSize(parseInt(value))}
-          >
-            <SelectTrigger
-              className="w-24 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 
-                                focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 
-                                rounded-lg px-4 py-2 text-gray-900 dark:text-gray-100"
-            >
-              <SelectValue placeholder="Set Page Size" />
-            </SelectTrigger>
-            <SelectContent className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700">
-              <SelectItem value="10">10</SelectItem>
-              <SelectItem value="20">20</SelectItem>
-              <SelectItem value="25">25</SelectItem>
-              <SelectItem value="50">50</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
+      <Pagination
+        pageSize={pageSize}
+        totalTransaction={totalTransaction}
+        onPageChange={setPage}
+        setPageSize={setPageSize}
+      />
     </>
   );
 }

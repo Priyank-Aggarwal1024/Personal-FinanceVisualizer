@@ -24,6 +24,9 @@ const MonthlyIncomeChart = ({ transactions }) => {
     monthYear,
     amount: income[monthYear],
   }));
+  if (!transactions || transactions.length === 0) {
+    return <p>No data available.</p>;
+  }
 
   return (
     <ResponsiveContainer width="100%" height={300}>

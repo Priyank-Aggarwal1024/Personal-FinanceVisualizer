@@ -1,5 +1,5 @@
 "use client";
-import { FaChartBar, FaDollarSign } from "react-icons/fa";
+import { FaChartBar, FaDollarSign, FaList } from "react-icons/fa";
 import { LuPanelRightOpen, LuPanelRightClose } from "react-icons/lu";
 import AnimatedCircle from "./AnimatedCircle";
 import Link from "next/link";
@@ -7,6 +7,7 @@ const Sidebar = ({ minimized, toggleMinimize, setOpen, open }) => {
   const menuItems = [
     { icon: <FaChartBar />, label: "Dashboard", to: "/" },
     { icon: <FaDollarSign />, label: "Transactions", to: "/transactions" },
+    { icon: <FaList />, label: "Category Budget", to: "/category" },
   ];
 
   return (
